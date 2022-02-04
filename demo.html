@@ -3,23 +3,72 @@
   <head>
     <meta charset="UTF-8">
     <title>Speech paragraph</title>
+
+    <style>
+      body {
+        font-family: Verdana;
+      }
+
+      h1, h2 {
+        font-weight: normal;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p[is="speech-paragraph"],
+      speech-paragraph {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        padding: 10px;
+        border: 1px solid #cecece;
+        font-size: 0.8em;
+      }
+
+      speech-paragraph {
+        display: block;
+        margin-top: 1rem;
+      }
+    </style>
   </head>
   <body>
+    <h1>speech-paragraph</h1>
 
+    <h2>English</h2>
     <p is="speech-paragraph">
-      This paragraph contains text that will be read out loud.
+      This paragraph contains Englist text that will be read out loud.
     </p>
 
+    <h2>Nederlands</h2>
     <p is="speech-paragraph" lang="nl-NL">
-      Deze paragraaf bevat een hele lange tekst die wordt voorgelezen.
+      Deze paragraaf bevat Nederlandse tekst die wordt voorgelezen.
     </p>
 
+    <h2>Deutsch</h2>
     <p is="speech-paragraph" lang="de-DE">
-      Dieser Abschnitt enthält Text, der gelesen wird.
+      Dieser Abschnitt enthält deutschen Text, der vorgelesen wird.
     </p>
 
+    <h2>Français</h2>
     <p is="speech-paragraph" lang="fr-FR">
-      Cette section contient du texte qui sera lu.
+      Cette section contient du texte français qui sera lu.
+    </p>
+
+    <h2>Fallback element</h2>
+
+    <p>
+      Below is the <code>&lt;speech-paragraph&gt;</code> element that can be used with browsers that don't support
+      extending native HTML elements.
+    </p>
+
+    <p>
+      In supporting browsers, this element will be a regular paragraph.
     </p>
 
     <speech-paragraph>

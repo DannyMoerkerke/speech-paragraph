@@ -4,8 +4,11 @@
   "description": "A Web Component that enables the native paragraph HTML element to read out its text through Web Speech Synthesis",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ws -p 8080 --spa demo.html"
   },
   "author": "Danny Moerkerke <danny@dannymoerkerke.nl>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "local-web-server": "^5.1.1"
+  }
 }

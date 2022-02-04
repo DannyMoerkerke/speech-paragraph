@@ -18,13 +18,13 @@ const mixin = superClass => class extends superClass {
     shadowRoot.innerHTML = `
             <style>
               :host {
-                --play-button-size: 12px;
-                --play-button-color: #000000;
+                --button-size: 12px;
+                --button-color: #000000;
                 --text-highlight-color: #ffff00;
                 position: relative;
                 display: block;
                 width: max-content;
-                padding-top: calc(var(--play-button-size) * 2);
+                padding-top: calc(var(--button-size) * 2) !important;
               }
 
               .play-button,
@@ -34,8 +34,8 @@ const mixin = superClass => class extends superClass {
                 top: 3px;
                 right: 3px;
                 z-index: 9999;
-                width: calc(var(--play-button-size) * 2);
-                height: calc(var(--play-button-size) * 2);
+                width: calc(var(--button-size) * 2);
+                height: calc(var(--button-size) * 2);
                 border: none;
                 cursor: pointer;
                 background-color: transparent;
@@ -58,18 +58,18 @@ const mixin = superClass => class extends superClass {
               .play-button-icon,
               .pause-button-icon {
                 display: block;
-                width: var(--play-button-size);
-                height: var(--play-button-size);
+                width: var(--button-size);
+                height: var(--button-size);
               }
 
               .play-button-icon {
-                background-color: var(--play-button-color);
+                background-color: var(--button-color);
                 clip-path: polygon(0% 0%,0% 100%,100% 50%);
               }
 
               .pause-button-icon {
-                border-left: calc(var(--play-button-size) * .4) solid var(--play-button-color);
-                border-right: calc(var(--play-button-size) * .4) solid var(--play-button-color);
+                border-left: calc(var(--button-size) * .4) solid var(--button-color);
+                border-right: calc(var(--button-size) * .4) solid var(--button-color);
                 background-color: transparent;
                 box-sizing: border-box;
               }
@@ -126,6 +126,7 @@ const mixin = superClass => class extends superClass {
       if(!e.composedPath().includes(this.playButton) && !e.composedPath().includes(this.pauseButton)) {
         this.removeHighlights();
         this.hasselection = false;
+        this.synth.cancel();
       }
     });
 
