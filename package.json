@@ -1,0 +1,11 @@
+{
+  "name": "speech-paragraph",
+  "version": "0.0.1",
+  "description": "A Web Component that enables the native paragraph HTML element to read out its text through Web Speech Synthesis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Danny Moerkerke <danny@dannymoerkerke.nl>",
+  "license": "ISC"
+}
