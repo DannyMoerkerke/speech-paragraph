@@ -2,7 +2,18 @@
   "name": "speech-paragraph",
   "version": "0.0.1",
   "description": "A Web Component that enables the native paragraph HTML element to read out its text through Web Speech Synthesis",
-  "main": "index.js",
+  "main": "src/speech-paragraph.js",
+  "module": "src/speech-paragraph.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:DannyMoerkerke/speech-paragraph.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "/src"
+  ],
   "scripts": {
     "start": "ws -p 8080 --spa demo.html"
   },
